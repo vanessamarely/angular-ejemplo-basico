@@ -9,7 +9,7 @@ export class LoginService {
   constructor(private http: HttpClient) { }
 
   getApi(username: string) {
-    return this.http.get(`${this.apiRoot}${username}/repos`);
+    return this.http.get(`${this.apiRoot}${username}`);
   }
 
 }
