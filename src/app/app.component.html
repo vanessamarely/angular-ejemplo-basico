@@ -19,6 +19,8 @@
 </section>
 <section *ngIf="responseList">
     <h2>Titulo sdfs </h2>
-    {{ responseList | json }} {{ responseList.avatar_url }}
+    {{ responseList | json }} 
     
+    <img [src]="responseList.avatar_url" />
+   
 </section>
