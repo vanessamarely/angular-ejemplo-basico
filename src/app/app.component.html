@@ -1,4 +1,23 @@
-<hello name="{{ name }}"></hello>
-<p>
- Hola este es mi componente!
-</p>
+<section id="authentication">
+  <h1>Autentiquemonos en Github 😉</h1>
+  <form class="form" #form="ngForm" (ngSubmit)="login(form.value)">
+    <div>
+      <label for="username">Añade un nombre: 
+        <input class="form__field"
+          id="username"
+          type="text"
+          placeholder="Añade el nombre de usuario ..."
+          required
+          name="username"
+          [(ngModel)]="model.username"
+        />
+      </label>
+    </div>
+    <button type='submit'>Enviar!!</button>
+  </form>
+  <p class="label">Form: {{ model | json }} </p>
+</section>
+<section *ngIf="responseList">
+    <h2>Titulo sdfs </h2>
+    {{ responseList | json }}
+</section>
