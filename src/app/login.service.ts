@@ -9,7 +9,7 @@ export class LoginService {
   constructor(private http: HttpClient) { }
   // si incluimos despues de ${username} el /repos, me traeria la lista de repositorios
   getApi(username: string) {
-    return this.http.get(`${this.apiRoot}${username}`);
+    return this.http.get(`${this.apiRoot}${username}/repos`);
   }
 
 }
